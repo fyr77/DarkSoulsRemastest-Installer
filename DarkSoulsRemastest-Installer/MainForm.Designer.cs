@@ -156,6 +156,8 @@ namespace DarkSoulsRemastest_Installer
             this.Controls.Add(this.buttonDirSel);
             this.Controls.Add(this.labelDir);
             this.Controls.Add(this.textBoxDir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "DarkSoulsRemastest-Installer";
             this.groupBox1.ResumeLayout(false);
