@@ -24,11 +24,11 @@ namespace DarkSoulsRemastest_Installer
             textBoxDir.Text = installDir;
 
             if (IsModded(installDir))
-                labelModded.Text += "Yes, version " + GetInstalledVer(installDir);
+                labelModded.Text = "Yes, version " + GetInstalledVer(installDir);
             else
-                labelModded.Text += "No.";
+                labelModded.Text = "No.";
 
-            labelModVerOnline.Text += GetOnlineVer();
+            labelModVerOnline.Text = GetOnlineVer();
         }
         private string GetInstallDir()
         {
@@ -205,8 +205,9 @@ namespace DarkSoulsRemastest_Installer
             textBoxDir.Enabled = true;
             buttonDirSel.Enabled = true;
             Directory.Delete(tempPath, true);
-            labelModded.Text += "Yes, version " + GetInstalledVer(gameDir);
+            labelModded.Text = "Yes, version " + GetInstalledVer(gameDir);
             buttonInstall.Enabled = true;
+            MessageBox.Show("Installation completed.\nFor multiplayer to work, you have to run DSCM before starting the game!");
         }
         private void CopyFolder(string sourceFolder, string destFolder)
         {

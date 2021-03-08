@@ -34,11 +34,13 @@ namespace DarkSoulsRemastest_Installer
             this.buttonDirSel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonInstall = new System.Windows.Forms.Button();
-            this.labelModVerOnline = new System.Windows.Forms.Label();
-            this.labelModded = new System.Windows.Forms.Label();
+            this.labelInfoModVerOnline = new System.Windows.Forms.Label();
+            this.labelInfoModded = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelProgress = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.labelModded = new System.Windows.Forms.Label();
+            this.labelModVerOnline = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,9 +72,11 @@ namespace DarkSoulsRemastest_Installer
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonInstall);
             this.groupBox1.Controls.Add(this.labelModVerOnline);
             this.groupBox1.Controls.Add(this.labelModded);
+            this.groupBox1.Controls.Add(this.buttonInstall);
+            this.groupBox1.Controls.Add(this.labelInfoModVerOnline);
+            this.groupBox1.Controls.Add(this.labelInfoModded);
             this.groupBox1.Location = new System.Drawing.Point(13, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(520, 89);
@@ -89,23 +93,23 @@ namespace DarkSoulsRemastest_Installer
             this.buttonInstall.UseVisualStyleBackColor = true;
             this.buttonInstall.Click += new System.EventHandler(this.ButtonInstall_Click);
             // 
-            // labelModVerOnline
+            // labelInfoModVerOnline
             // 
-            this.labelModVerOnline.AutoSize = true;
-            this.labelModVerOnline.Location = new System.Drawing.Point(6, 45);
-            this.labelModVerOnline.Name = "labelModVerOnline";
-            this.labelModVerOnline.Size = new System.Drawing.Size(129, 13);
-            this.labelModVerOnline.TabIndex = 1;
-            this.labelModVerOnline.Text = "Most recent mod version: ";
+            this.labelInfoModVerOnline.AutoSize = true;
+            this.labelInfoModVerOnline.Location = new System.Drawing.Point(6, 45);
+            this.labelInfoModVerOnline.Name = "labelInfoModVerOnline";
+            this.labelInfoModVerOnline.Size = new System.Drawing.Size(129, 13);
+            this.labelInfoModVerOnline.TabIndex = 1;
+            this.labelInfoModVerOnline.Text = "Most recent mod version: ";
             // 
-            // labelModded
+            // labelInfoModded
             // 
-            this.labelModded.AutoSize = true;
-            this.labelModded.Location = new System.Drawing.Point(6, 19);
-            this.labelModded.Name = "labelModded";
-            this.labelModded.Size = new System.Drawing.Size(78, 13);
-            this.labelModded.TabIndex = 0;
-            this.labelModded.Text = "Mod installed? ";
+            this.labelInfoModded.AutoSize = true;
+            this.labelInfoModded.Location = new System.Drawing.Point(6, 19);
+            this.labelInfoModded.Name = "labelInfoModded";
+            this.labelInfoModded.Size = new System.Drawing.Size(78, 13);
+            this.labelInfoModded.TabIndex = 0;
+            this.labelInfoModded.Text = "Mod installed? ";
             // 
             // progressBar1
             // 
@@ -122,6 +126,24 @@ namespace DarkSoulsRemastest_Installer
             this.labelProgress.Size = new System.Drawing.Size(41, 13);
             this.labelProgress.TabIndex = 5;
             this.labelProgress.Text = "Ready.";
+            // 
+            // labelModded
+            // 
+            this.labelModded.AutoSize = true;
+            this.labelModded.Location = new System.Drawing.Point(153, 19);
+            this.labelModded.Name = "labelModded";
+            this.labelModded.Size = new System.Drawing.Size(28, 13);
+            this.labelModded.TabIndex = 3;
+            this.labelModded.Text = "<...>";
+            // 
+            // labelModVerOnline
+            // 
+            this.labelModVerOnline.AutoSize = true;
+            this.labelModVerOnline.Location = new System.Drawing.Point(153, 45);
+            this.labelModVerOnline.Name = "labelModVerOnline";
+            this.labelModVerOnline.Size = new System.Drawing.Size(28, 13);
+            this.labelModVerOnline.TabIndex = 4;
+            this.labelModVerOnline.Text = "<...>";
             // 
             // MainForm
             // 
@@ -149,12 +171,14 @@ namespace DarkSoulsRemastest_Installer
         private System.Windows.Forms.Label labelDir;
         private System.Windows.Forms.Button buttonDirSel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelModVerOnline;
-        private System.Windows.Forms.Label labelModded;
+        private System.Windows.Forms.Label labelInfoModVerOnline;
+        private System.Windows.Forms.Label labelInfoModded;
         private System.Windows.Forms.Button buttonInstall;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label labelProgress;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label labelModVerOnline;
+        private System.Windows.Forms.Label labelModded;
     }
 }
 
